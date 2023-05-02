@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Text Adventure">
+   <meta name="author" content="Eric Collard">
+   <link rel="stylesheet" href="styles.css">
+   <title>Text Adventure</title>
+</head>
+<body>
+<div class="start-btn-box">
+<button class="play-btn" id="s-btn" onclick="hideBtn()"><span class="chiseled">ZONK!</span></button>
+<button class="hide" id="r-btn" onclick="hideBtn()"><span class="chiseled">REZONK!</span></button>
+</div>
+<div id="control-toggle-container">
+   <label for="control-toggle">
+   <input type="checkbox" name="control-toggle" id="control-toggle" onclick="controlToggle()" checked><span>Toggle Control Style</span>
+</label></div>
+<div id="room-id"></div>
+<div id="container-btn-controls">
+   <div id="output-containers">
+<div id="pers-output">
+   <!-- <span id="font1">Here is courier new</span>
+   <span id="font2">Here is franklin gothic m</span>
+   <span id="font3">Here is gill sans</span>
+   <span id="font4">Here is lucida sans</span>
+   <span id="font5">Here is segoe ui</span>
+   <span id="font6">Here is times new roman</span>
+   <span id="font7">Here is trebuchet</span>
+   <span id="font8">Here is arial</span>
+   <span id="font9">Here is cambria</span>
+   <span id="font10">Here is georgia</span>
+   <span id="font11">Here is impact</span>
+   <span id="font12">Here is verdana</span>
+   <span id="font13">Here is cursive</span>
+   <span id="font14">Here is fantasy</span>
+   <span id="font15">Here is monospace</span>
+   <span id="font16">Here is sans-serif</span>
+   <span id="font17">Here is serif</span>
+   <span id="font18">Here is system-ui</span> -->
+</div>
+<div id="temp-output"></div>
+</div>
+<div id="buttons-and-scene">
+<div id="scene-div"><img src="./Images/Shack.png" alt=""></div>
+<div id="btn-controls-div" class="btn-container-flex">
+   <button id="complete"></button>
+   <button class="control" id="north"><span class="chiseled">NORTH</span></button>
+   <button class="control" id="south"><span class="chiseled">SOUTH</span></button>
+   <button class="control" id="west"><span class="chiseled">WEST</span></button>
+   <button class="control" id="east"><span class="chiseled">EAST</span></button>
+   <button class="control actions" id="look"><span class="chiseled">LOOK</span></button>
+   <button class="control actions" id="take"><span class="chiseled">TAKE</span></button>
+   <button class="control actions" id="inventory"><span class="chiseled">INV</span></button>
+</div>
+</div>
+</div>
+<div class="hide" id="input-container">
+   <input type="text" id="input">
+   <button id="submit"><span class="chiseled">Submit</span></button>
+</div>
+
+
+
+<!-- <div id="buttons-container">
+   <div id="buttons">
+       <button id="north" class="button">NORTH</button>
+       <button id="south" class="button">SOUTH</button>
+       <button id="west" class="button">WEST</button>
+       <button id="east" class="button">EAST</button>
+       <button id="start" class="button" onclick="startGame()">START</button>
+       <button id="stop" class="button" onclick="endGame()">STOP</button>
+   </div>
+   <button id="complete" class="control hide complete">COMPLETE</button>
+</div> -->
+
+
+
+
+<audio id="forest-ambience">
+   <source src="./Sounds/forestEthnoAmbience.wav" type="audio/wav">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
